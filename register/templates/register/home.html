@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Home</h1>
+    <p class='right'><a href="{% url 'register' %}">Register</a></p>
+    <h2>User:</h2>
+    <ul>
+      {% for member in user %}
+      <li>{{ member.username }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
